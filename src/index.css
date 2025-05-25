@@ -132,6 +132,6 @@ body {
 }
 
 .header-title {
-  color: white;
+  color: white !important;
   margin: 0;
 }
