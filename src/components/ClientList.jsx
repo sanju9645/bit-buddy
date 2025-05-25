@@ -12,6 +12,7 @@ function ClientList() {
   const peer = useContext(PeerContext);
   const remotePeer = useContext(RemotePeerContext);
   const [position, setPosition] = useState({ top: 0, left: 0 });
+
   useEffect(() => {
     // Function to get a random position
     const getRandomPosition = () => {
@@ -28,6 +29,7 @@ function ClientList() {
     // Set the position to a random spot
     setPosition(getRandomPosition());
   }, []);
+  
   return (
     <div>
       {Object.values(clients).map(

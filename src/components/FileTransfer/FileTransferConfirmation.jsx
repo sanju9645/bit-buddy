@@ -2,7 +2,7 @@ import { Button } from 'antd';
 
 const FileTransferConfirmation = ({ data, onAccept, onDecline }) => {
   return (
-    <div>
+    <div className="file-transfer-confirmation">
       <p>{`${data.senderName} wants to send ${data.fileName} (${(
         data.fileSize /
         (1024 * 1024)
@@ -12,11 +12,7 @@ const FileTransferConfirmation = ({ data, onAccept, onDecline }) => {
           variant="solid"
           color="primary"
           onClick={onAccept}
-          style={{
-            marginRight: "8px",
-            padding: "5px 10px",
-            cursor: "pointer",
-          }}
+          className="file-transfer-button file-transfer-button-accept"
         >
           Accept
         </Button>
@@ -24,7 +20,7 @@ const FileTransferConfirmation = ({ data, onAccept, onDecline }) => {
           variant="solid"
           color="danger"
           onClick={onDecline}
-          style={{ padding: "5px 10px", cursor: "pointer" }}
+          className="file-transfer-button"
         >
           Decline
         </Button>

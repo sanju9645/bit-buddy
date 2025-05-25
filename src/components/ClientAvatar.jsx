@@ -14,12 +14,14 @@ function ClientAvatar(props) {
   const [clickedPeer, setClickedPeer] = useState(null);
   const [fileList, setFileList] = useState([]);
   const [uploading, setUploading] = useState(false);
+
   useEffect(() => {
     if (fileProgress.progress === 100) {
       setUploading(false);
       remotePeer.setFileToSend(null);
     }
   }, [fileProgress?.progress, remotePeer]);
+
   const handleUpload = () => {
     console.log(fileList);
     setUploading(true);
@@ -27,6 +29,7 @@ function ClientAvatar(props) {
     setFileList([]);
     remotePeer.setFileToSend(null);
   };
+
   const handleChange = (info) => {
     if (uploading) return;
     setFileList([]);
@@ -39,6 +42,7 @@ function ClientAvatar(props) {
       remotePeer.setFileToSend(null);
     }
   };
+
   const uploadProps = {
     onRemove: (file) => {
       this.setState((state) => {
@@ -60,6 +64,7 @@ function ClientAvatar(props) {
     },
     fileList,
   };
+
   const content = (
     <div>
       <Upload
@@ -69,17 +74,19 @@ function ClientAvatar(props) {
       >
         <Button icon={<UploadOutlined />}> Select File</Button>
       </Upload>
+      
       <Button
         type="primary"
         onClick={handleUpload}
         disabled={fileList.length === 0}
         loading={uploading}
-        style={{ marginTop: 16 }}
+        className="upload-button"
       >
         {uploading ? "Uploading" : "Send File"}
       </Button>
     </div>
   );
+
   useEffect(() => {
     // Attempt to connect to peer only when clickedPeer is set
     if (clickedPeer && !remotePeer.remotePeerName) {
@@ -89,12 +96,12 @@ function ClientAvatar(props) {
   }, [clickedPeer, remotePeer]);
 
   return (
-    <div style={{}}>
+    <div className="client-avatar-container">
       <Space direction="vertical" size={16}>
         <Space
           wrap
           size={16}
-          style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}
+          className="client-avatar-space"
         >
           <Popover
             content={content}
@@ -108,13 +115,13 @@ function ClientAvatar(props) {
                   ? AvatarIcons[props.client.peerName.split(" ")[1]]
                   : ""
               }
-              style={{ cursor: "pointer" }}
+              className="client-avatar"
               onClick={() => {
                 setClickedPeer(props.client);
               }}
             />
           </Popover>
-          <Title level={5} style={{ margin: "0", textTransform: "capitalize" }}>
+          <Title level={5} className="client-avatar-title">
             {props.client.peerName}{" "}
           </Title>
         </Space>

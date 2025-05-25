@@ -32,7 +32,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #63B4F5;
+  border: 1px solid #9e11f4;
   opacity: 1;
   animation: rippleAnimation 10s infinite;
 }
@@ -54,4 +54,84 @@ body {
   position: absolute;
   bottom: 6rem;
   width: 10rem;
+}
+
+.avatar-icon-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.avatar-icon-space {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.avatar-icon-title {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.client-avatar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.client-avatar-space {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.client-avatar-title {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.client-avatar {
+  cursor: pointer;
+}
+
+.upload-button {
+  margin-top: 16px;
+  margin: 10px;
+}
+
+.loading-container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.file-transfer-button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.file-transfer-button-accept {
+  margin-right: 8px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.header-logo {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.75rem;
+}
+
+.header-title {
+  color: white;
+  margin: 0;
 }

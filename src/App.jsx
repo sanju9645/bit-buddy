@@ -4,7 +4,7 @@ import { Typography } from "antd";
 import io from "socket.io-client";
 import Peer from "peerjs";
 import { Toaster } from "react-hot-toast";
-import HashLoader from "react-spinners/HashLoader";
+import DotLoader from "react-spinners/DotLoader";
 
 import ClientList from "./components/ClientList";
 import HeaderSection from "./components/Header";
@@ -98,17 +98,8 @@ function App() {
       <ClientsContext.Provider value={{ clients, setClients }}>
         <HeaderSection style={{ zindex: "100" }} />
         {!peerName ? (
-          <div
-            style={{
-              height: "90vh",
-              width: "100vw",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <HashLoader />
+          <div className="loading-container">
+            <DotLoader />
             <Title level={4}>Loading</Title>
           </div>
         ) : (

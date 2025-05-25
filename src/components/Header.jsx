@@ -8,9 +8,9 @@ const { Title } = Typography;
 function HeaderSection() {
   return (
     <Layout>
-      <Header style={{ display: "flex", alignItems: "center", padding:"0", gap:"0.25rem"}}>
-        <img style={{width: "4rem", height:"4rem", padding:"0.75rem"}} src={Logo}/>
-        <Title level={3} style={{ color: 'white', margin: 0 }}>Bit Buddy</Title>
+      <Header className="header-container">
+        <img className="header-logo" src={Logo}/>
+        <Title level={3} className="header-title">Bit Buddy</Title>
       </Header>
     </Layout>
   );
