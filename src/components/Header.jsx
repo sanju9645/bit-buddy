@@ -10,7 +10,7 @@ function HeaderSection() {
     <Layout>
       <Header className="header-container">
         <img className="header-logo" src={Logo}/>
-        <Title level={3} className="header-title">Bit Buddy</Title>
+        <Title level={3} className="header-title text-white">Bit Buddy</Title>
       </Header>
     </Layout>
   );
