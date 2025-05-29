@@ -6,8 +6,6 @@ export const usePeerConnection = (socket, peerRef, connRef, peerId, peerName, re
   const { clients } = useContext(ClientsContext);
 
   const connectToPeer = (clientId, clientName = "") => {
-    console.log("peerRef: ", peerRef.current);
-    console.log("remotePeerId: ", clientId);
     if (peerRef.current && clientId) {
       const conn = peerRef.current.connect(clientId);
       connRef.current = conn;
