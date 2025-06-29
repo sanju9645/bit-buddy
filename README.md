@@ -1,6 +1,8 @@
 # bit-buddy
 Zap your files across the web, no middleman!
 
+Demo: https://bit-buddy-i9qb.onrender.com
+
 https://vite.dev/guide/
 
 npm create vite@latest
