@@ -2,6 +2,8 @@
 Zap your files across the web, no middleman!
 ---
 
+## bit-buddy – Bit Buddy is a peer-to-peer file sharing application that works seamlessly across different platforms
+
 Demo: https://bit-buddy-i9qb.onrender.com
 
 https://vite.dev/guide/
